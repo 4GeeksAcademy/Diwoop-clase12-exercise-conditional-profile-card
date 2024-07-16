@@ -1,8 +1,9 @@
 import "../style/index.css";
 
 function render(variables = {}) {
-  let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
+   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
+
   document.getElementById("name").innerHTML = variables.name;
   if (variables.name === null) {
     variables.name = "";
@@ -11,6 +12,7 @@ function render(variables = {}) {
   if (variables.lastName === null) {
     variables.lastName = "";
   }
+  
   let role = document.getElementById("role");
   if (role === null && role === "") {
     role = "Web Developer";
